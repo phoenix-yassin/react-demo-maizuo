@@ -18,10 +18,10 @@ class Header extends Component {
         console.log(this.props)
     }
     render(){
-        const {title} = this.props
+        const {title, changeLeftNavState} = this.props
         return (
             <div id="header">
-                <a className="go-menu"><i className="icon iconfont icon-menu"></i></a>
+                <a className="go-menu" onClick={changeLeftNavState}><i className="icon iconfont icon-menu"></i></a>
                 <div className="title">
                     <p>{title}</p>
                     <a className="go-city">广州<i className="icon iconfont icon-bottom"></i></a>
@@ -40,7 +40,7 @@ const mapStateToProps = (state) => {
 }
 const mapDispatchToProps = (dispatch) => {
     return {
-        actions:bindActionCreators(actions,dispatch)
+        changeLeftNavState: () => dispatch(actions.changeLeftNavStatus(true))
     }
 }
 

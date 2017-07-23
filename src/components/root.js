@@ -7,6 +7,7 @@ import * as actions from '../redux/actions/com'
 import Header from './header'
 import Loading from './loading'
 import GoTop from './go-top'
+import Sidebar from './sidebar'
 
 class Roots extends Component {
 	/**
@@ -52,6 +53,7 @@ class Roots extends Component {
 			<div>
 				<Header />
 				<Loading />
+				<Sidebar/>
 				<ReactCSSTransitionGroup  transitionName="page" transitionEnterTimeout={500} transitionLeaveTimeout={300}>
 					<div id="container" className="container" key={this.props.location.pathname}>
 						{this.props.children}
@@ -65,6 +67,7 @@ class Roots extends Component {
 
 const mapStateToProps = (state) => {
   return {
+
   }
 }
 

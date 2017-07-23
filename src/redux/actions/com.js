@@ -18,3 +18,10 @@ export function conf(settings){
         settings:settings
     }
 }
+
+export function changeLeftNavStatus(isShow) {
+	return {
+		type: types.CHANGE_LEFTNAV_STATUS,
+		showLeftNav: isShow,
+	}
+}

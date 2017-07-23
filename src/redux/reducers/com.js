@@ -20,7 +20,7 @@ export default function settingState(state=initialState,action){
 			});
 		case types.CHANGE_LEFTNAV_STATUS:
 			return Object.assign({},state,{
-				leftNavState:action.leftNavState
+				leftNavState:action.showLeftNav
 			});
 		case types.CHANGE_PATHNAME:
 			return Object.assign({},state,{
